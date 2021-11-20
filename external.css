@@ -1,0 +1,19 @@
+h1{
+color:orange;
+font-style:bold;
+background-color:#139bf0;
+}
+p{
+color:#ffe359;
+font-size:revert;
+background-color:blue;
+}
+table{
+font-family:"Times New Roman";
+text-align:left;
+background-color:#ffa294;
+font-size: medium;
+}
+
+ul{
+ 
