@@ -1,0 +1,35 @@
+<html>
+<center>
+<head>
+<u><h1>LOGIN FORM</h1></u>
+</head>
+<body>
+<form name="login">
+<table>
+<tr><td>Username</td><td> <input type="text" name="uname"></td></tr>
+<tr><td>Password</td><td><input type="password" name="pwd"></td></tr>
+<tr><td>Retype password:</td><td> <input type="password" name="repwd"></td></tr>
+<tr><td><td><input type="button" value="login" name="btn" onclick="validate()"></td></tr>
+</table>
+
+</form>
+</center>
+<script>
+function validate()
+{
+var a=document.login.uname.value;
+var b=document.login.pwd.value;
+var c=document.login.repwd.value;
+console.log(a+b+c);
+if(a=="" || b=="" || c=="")
+alert("fields can't be blank");
+else
+if(b.length<6)
+alert("password should be greater than 6");
+else if(b!=c)
+alert("password doesn't match");
+}
+</script>
+</body>
+</html>
+ 
