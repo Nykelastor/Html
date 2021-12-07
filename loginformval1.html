@@ -1,0 +1,60 @@
+<html>
+<center>
+<head>
+<u><h1>LOGIN FORM</h1></u>
+</head>
+<body>
+<form name="login">
+<table>
+<tr><td>Username</td><td> <input type="text" name="uname"></td></tr>
+<tr><td>Password</td><td><input type="password" name="pwd"></td></tr>
+<tr><td>Retype password:</td><td> <input type="password" name="repwd"></td></tr>
+<tr><td>Gender</td>
+    <td><input type="radio" name="gender" value="Male" id="male">Male
+    <input type="radio" name="gender" value="Female" id="female">Female</td></tr>
+<tr><td>Address</td>
+<td><textarea rows="5" cols="25" input type="text" name="address"></textarea></td></tr>    
+
+<tr><td>Hobbies</td>
+<td><input type="checkbox" name="hobby" id="hobby1">Reading
+	<input type="checkbox" name="hobby" id="hobby2">Writing
+	<input type="checkbox" name="hobby" id="hobby3">Games
+	<input type="checkbox" name="hobby" id="hobby4">Outdoor</td></tr>
+</tr>
+<tr><td><td><input type="button" value="login" name="btn" onclick="validate()"></td></tr>
+</table>
+
+</form>
+</center>
+<script>
+function validate()
+{
+var a=document.login.uname.value;
+var b=document.login.pwd.value;
+var c=document.login.repwd.value;
+
+console.log(a+b+c);
+if(a=="" || b=="" || c=="")
+alert("fields can't be blank");
+else
+if(b.length<6)
+alert("password should be greater than 6");
+else if(b!=c)
+alert("password doesn't match");
+
+var d=document.login.gender[0];
+var e=document.login.gender[1];
+if (d.checked==false && e.checked==false)
+alert("error gender not choosen")
+
+var f=document.login.address.value;
+if(f=="")
+alert("require address")
+
+var g=document.login.hobby.checked;
+if(!f)
+alert("choose hobbies")
+}
+</script>
+</body>
+</html>
